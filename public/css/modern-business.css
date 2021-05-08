@@ -1,0 +1,56 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+body {
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: white;
+}
+
+.titulo{
+  color: white;
+}
+.servi{
+  color:black;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.carousel-item {
+  height: 90vh;
+  min-height: 400px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+.social-icons{overflow: hidden; text-align: right; margin: 35px;
+}
+.social-icons a {display:inline-block; width:23px; height:23px; float:right;
+}
+.social-icons a:hover {background-position:0 bottom;
+}
+a {text-decoration:none; cursor:pointer;}
+a:hover {text-decoration:none;}
+a .button {background:#f4f4f4; font-size:14px; line-height:18px; color:#01a5ca; text-transform:uppercase; display:inline-block; padding:12px 16px 13px 16px; }
+a .button:hover {background:#d3d1d1; color:#333; }
+
+a .link {text-decoration:none; cursor:pointer; color:#01a5ca; }
+a .link:hover {text-decoration:underline;}
+
+.color-1 { color:#01a5ca;}
+a.color-1:hover {color:#000;}

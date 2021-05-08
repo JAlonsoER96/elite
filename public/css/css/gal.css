@@ -1,0 +1,61 @@
+.contenedor-galeria{
+	width: 657px;
+	height: 508px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%)
+	-webkit-transform: translate(-50%, -50%);
+	background-color: black;
+}
+.img1{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure1.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}
+.img2{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure2.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}
+.img3{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure3.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}
+.img4{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure4.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}
+.img5{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure5.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}
+.img6{
+	float: left;
+	width: 219px;
+	height: 254px;
+	background-image: url(../imagenes/thecure6.jpg);
+	background-size: 150% 120%;
+	background-position: center;
+}

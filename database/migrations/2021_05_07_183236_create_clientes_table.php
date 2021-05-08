@@ -15,19 +15,17 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre_cliente',100);
-            $table->integer('edad_cliente');
+            $table->string('nombre',100);
+            $table->integer('edad');
             $table->string('fecha_nacimiento', 50)->nullable();
-            $table->string('sexo_cliente', 2);
-            $table->decimal('altura');
-            $table->decimal('peso');
+            $table->string('sexo', 2);
             $table->string('ocupacion', 70)->nullable();
-            $table->string('direccion_cliente',100);
-            $table->string('telefono_cliente',20);
-            $table->string('correo_cliente', 100)->unique();
-            $table->string('foto_cliente');
+            $table->string('direccion',100);
+            $table->string('telefono',20);
+            $table->string('email', 100)->unique();
+            $table->string('foto');
+            $table->boolean('baja')->default(false);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
