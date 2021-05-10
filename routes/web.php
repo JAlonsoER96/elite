@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 /* Rutas para cliente */
 Route::get('/clientes/index', 'ClienteController@index')->name('clientes');
+
+Route::get('/clientes/alta','ClienteController@formAlta')->name('alta-clientes');
+
+Route::post('/clientes/save', 'ClienteController@save')->name('saveCliente');
