@@ -23,7 +23,7 @@ class CreateClientesTable extends Migration
             $table->string('direccion',100);
             $table->string('telefono',20);
             $table->string('email', 100)->unique();
-            $table->string('foto');
+            $table->string('foto',70);
             $table->softDeletes();
             $table->timestamps();
         });

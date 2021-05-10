@@ -6,12 +6,12 @@
 
 <center><h1>{{$proceso}}</h1>
 <br><center>
-{{$mensaje}}
+<b>{{$mensaje}}</b>
 </center>
 @push('script')
 <script >
 	function redireccionar(){
-		window.location="{{route('alta-clientes')}}";
+		window.location="{{route('clientes')}}";
 	}
 	setTimeout ("redireccionar()", 4000); //tiempo expresado en milisegundos
 </script>

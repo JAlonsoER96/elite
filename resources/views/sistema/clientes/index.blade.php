@@ -35,24 +35,45 @@ Clientes
                     <tbody>
                         @foreach ($clientes as $item)
                             <tr>
-                                <td> {{$item->idCliente}} </td>
-                                <td> {{$item->cliente}} </td>
-                                <td>
-                                    <a href="{{$item->cuestionario}}">Descargar</a>
+                                <td width="7%"> {{$item->idCliente}} </td>
+                                <td width="13.28%"> {{$item->cliente}} </td>
+                                <td width="13.28%">
+                                    <a href="{{ URL::action('ClienteController@generarCuestionario',['id'=>$item->idCliente])}}" target="_blank">
+                                        Descargar
+                                    </a>
                                 </td>
-                                <td> {{$item->telefono}} <br>{{$item->email}} </td>
-                                <td> {{$item->ultimo}} </td>
-                                <td>Por programar</td>
-                                <td> {{$item->foto}}</td>
+                                <td width="13.28%"> {{$item->telefono}} <br>{{$item->email}} </td>
+                                <td width="13.28%"> {{$item->ultimo}} </td>
+                                <td width="13.28%">Por programar</td>
                                 <td>
-                                    <button class="btn btn-info btn-raised btn-sm" style="color: black;">Ver</button>
-                                    <button class="btn btn-danger btn-raised btn-sm">Bloquear</button>
+                                    <img src="{{ asset('archivos/'.$item->foto) }}" height="110" width="110">
+                                </td>
+                                <td width="13.28%">
+                                    @if($item->deleted_at=="")
+                                    <a href="{{URL::action('ClienteController@obtenerPorId',['id'=>$item->idCliente])}}">
+                                        <button class="btn btn-info btn-raised btn-sm">Ver</button>
+                                    </a>
+                                    <a href="{{URL::action('ClienteController@eliminacionLogica',['id'=>$item->idCliente])}}">
+                                        <button class="btn btn-warning btn-raised btn-sm">Suspender</button>
+                                    </a>
+                                    @else
+                                    <a href="{{URL::action('ClienteController@restore',['id'=>$item->idCliente])}}">
+                                      <button class="btn-success btn-raised btn-sm">Restaurar</button>
+                                    </a>
+                                    <a href="{{URL::action('ClienteController@delete',['id'=>$item->idCliente])}}">
+                                        <button class="btn-danger btn-raised btn-sm">Eliminar</button>
+                                    </a>
+                                    @endif
+
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
+            <p style="text-align: center">
+                <a href="{{URL::action('ClienteController@formAlta')}}"><button class="btn btn-success btn-raised">Agregar Nuevo</button></a>
+            </p>
         </div>
     </div>
 </div>
